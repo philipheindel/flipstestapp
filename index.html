@@ -4,6 +4,16 @@
     <title>flipstestapp</title>
   </head>
   <body>
-    test page
+    <div id="testDiv">placeholder text</div>
   </body>
+  <script type="text/javascript">
+      var outputDiv = document.querySelector("#testDiv");
+      fetch("https://flipstestapp-dev.herokuapp.com/")
+      .then((response) => {
+        outputDiv.innerHTML = response;
+      })
+      .catch((err) => {
+        outputDiv.innerHTML = err;
+      });
+  </script>
 </html>
