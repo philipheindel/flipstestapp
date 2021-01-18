@@ -10,6 +10,7 @@
       var outputDiv = document.querySelector("#testDiv");
       fetch("https://flipstestapp-dev.herokuapp.com/")
       .then((response) => {
+        console.log(response.id);
         console.log(response);
         outputDiv.innerHTML = response.json();
       })
